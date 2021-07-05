@@ -5,12 +5,15 @@ import WeatherInfo from '../WeatherInfo/WeatherInfo';
 
 // create for each observation its own card...
 
-const WeatherBase = ({ min, max, dt, main, icon, temp, sunrise, sunset, feels_like, humidity, wind_speed, type }) => {
+const WeatherBase = ({ min, max, dt, description, icon, temp, sunrise, sunset, feels_like, humidity, wind_speed, type }) => {
 
     const date = new Date(dt);
     const sunriseTime = new Date(sunrise);
     const sunsetTime = new Date(sunset);
 
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+      }
 
     const Head = (
         <div className='info'><b>{min && max ? <>{date.toLocaleDateString()}</> :
@@ -19,7 +22,7 @@ const WeatherBase = ({ min, max, dt, main, icon, temp, sunrise, sunset, feels_li
 
     const Main_Forecast = (
 
-            <b>{main}
+            <b>{capitalizeFirstLetter(description)}
 
                 {min && max ?
 

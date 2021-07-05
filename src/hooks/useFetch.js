@@ -13,12 +13,12 @@ const useFetch = url => {
       .then( data => { 
         setIsLoading(false)
         if (data.cod>=400){
-          setError(data.message);
+          setError("Something went wrong...");
         }
         setData(data) ;
 ;
     })
-      .catch( error => { setError(error);
+      .catch( error => { setError("Something went wrong...");
         setIsLoading(false);
     })
   },[url])

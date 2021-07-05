@@ -15,7 +15,7 @@ const WeatherPage = () => {
     const { data: weather, error, isLoading } = useFetch(`${baseUrl}`)
 
     // if error show the error
-    if (error) return <div>Error: {error} </div>;
+    if (error) return <div className= "error"> {error} </div>;
 
     // if weather is loadind show Loading
     if (!weather) return isLoading ?
@@ -37,7 +37,7 @@ const WeatherPage = () => {
                         dt={weather.current.dt * 1000}
                         sunrise={weather.current.sunrise * 1000}
                         sunset={weather.current.sunset * 1000}
-                        main={weather.current.weather[0].main}
+                        description={weather.current.weather[0].description}
                         icon={weather.current.weather[0].icon}
                         temp={weather.current.temp}
                         feels_like={weather.current.feels_like}
@@ -66,7 +66,7 @@ const WeatherPage = () => {
                                         dt={weatherHour.dt * 1000}
                                         sunrise={weatherHour.sunrise * 1000}
                                         sunset={weatherHour.sunset * 1000}
-                                        main={weatherHour.weather[0].main}
+                                        description={weatherHour.weather[0].description}
                                         icon={weatherHour.weather[0].icon}
                                         temp={weatherHour.temp}
                                         type='hourly'
@@ -102,7 +102,7 @@ const WeatherPage = () => {
                                 dt={weatherDay.dt * 1000}
                                 sunrise={weatherDay.sunrise * 1000}
                                 sunset={weatherDay.sunset * 1000}
-                                main={weatherDay.weather[0].main}
+                                description={weatherDay.weather[0].description}
                                 icon={weatherDay.weather[0].icon}
                                 feels_like={weatherDay.feels_like.day}
                                 type='daily'
