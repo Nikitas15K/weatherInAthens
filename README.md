@@ -4,24 +4,21 @@ You need an api key for the data from https://openweathermap.org/api
 
 How to install it? 
 
-choose a  folder in your pc 
+-choose a  folder in your pc 
 
-open 
-# git bash 
+-open git bash and write
 
-and write
+git clone https://github.com/Nikitas15K/weatherInAthens.git
 
-# git clone https://github.com/Nikitas15K/weatherInAthens.git
+-inside the created project folder weatherInAthens, open a cmd, and press
+npm install
 
-inside the created project folder weatherInAthens, open a cmd, and press
-# npm install
-
-inside the project folder, in the src/config/index.js
+-inside the project folder, in the src/config/index.js
 insert the open weather api key inside the quotation mark:
 export const apiKey = ""
 
-back to the cmd, press
-# npm start
+-back to the cmd, press
+npm start
 
 here we are!
 
