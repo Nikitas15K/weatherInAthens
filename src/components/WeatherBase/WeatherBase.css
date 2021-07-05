@@ -22,18 +22,19 @@ article {
 .current{
     padding: 1rem 1rem 0.5rem 1rem;
     border: none;
+    box-shadow: none;
     display: grid;
     grid-template-areas: 
     "info  img title"
-    "prediction  prediction title";
+    "prediction  img title";
     grid-template-rows: 1fr 0.5fr ;
-    grid-template-columns: 4fr 4fr 0.5fr;
+    grid-template-columns: 3.5fr 4fr 0.5fr;
 }
 
 .current img{
     grid-area: img;
-    width:7rem;
-    height:7rem;
+    width:9rem;
+    height:9rem;
 }
 
 
@@ -41,7 +42,7 @@ article {
     grid-area: title;
     background:rgba(84, 115, 218, 0.3);
     writing-mode: vertical-rl;
-font-size: 20px;
+    font-size: 20px;
     margin-top: -3rem; 
     padding-top: 20px;}
 

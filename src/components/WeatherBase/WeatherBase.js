@@ -17,6 +17,20 @@ const WeatherBase = ({ min, max, dt, main, icon, temp, sunrise, sunset, feels_li
             <>{date.toLocaleTimeString().replace('π.μ.', 'a.m.').replace('μ.μ.', 'p.m.')}</>}</b>
         </div>)
 
+    const Main_Forecast = (
+
+            <b>{main}
+
+                {min && max ?
+
+                    <p>{Math.round(min)}℃ - {Math.round(max)}℃</p>
+                    :
+
+                    <p>{Math.round(temp)}℃</p>
+                }
+            </b>
+        )
+
 
 
     return (
@@ -25,25 +39,15 @@ const WeatherBase = ({ min, max, dt, main, icon, temp, sunrise, sunset, feels_li
 
             <div>{Head}</div>
 
+            <div className='main'>{Main_Forecast}</div>
+
 
             <img src={weatherIcons(icon)} alt="Weather" />
 
             <div className='prediction'>
 
-                <div className='main'>
-                    <b>{main}
 
-                        {min && max ?
-
-                            <p>{Math.round(min)}℃ - {Math.round(max)}℃</p>
-                            :
-
-                            <p>{Math.round(temp)}℃</p>
-                        }
-                    </b></div>
-
-
-{/* modal that comes out when you press show more */}
+                {/* modal that comes out when you press show more */}
                 <WeatherInfo
                     activator={({ setShowWeatherInfo }) => (
                         <button onClick={() => setShowWeatherInfo(true)}>Show more</button>
@@ -52,6 +56,8 @@ const WeatherBase = ({ min, max, dt, main, icon, temp, sunrise, sunset, feels_li
                     <h2>Weather In Athens</h2>
 
                     <div>{Head}</div>
+
+                    <div>{Main_Forecast}</div>
 
                     <img src={weatherIcons(icon)} alt="Weather" />
 
