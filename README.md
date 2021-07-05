@@ -1,4 +1,6 @@
-This is an app to inform the user about the weather in Athens now, for the next 5 hours and the next 5 days
+This is an app to inform the user about the weather in Athens now, for the next 5 hours and the next 5 days.
+
+It is created without using any extra library.
 
 You need an api key for the data from https://openweathermap.org/api 
 
