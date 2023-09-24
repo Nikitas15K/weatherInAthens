@@ -2,6 +2,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+Get an apiKey from openweathermap.org.
+Create a config folder with an index.js in it. Export baseUrl https://api.openweathermap.org/data/2.5/onecall?lat=<some_lat>&lon=<some_lon>&units=metric&exclude=minutely,alerts&appid=${apiKey}
+
 First, run the development server:
 
 ```bash
