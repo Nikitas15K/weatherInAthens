@@ -1,0 +1,78 @@
+.App {
+  text-align: left;
+}
+
+* {
+  box-sizing: border-box;
+  margin-bottom:0;
+  margin-top:5px;
+  text-decoration: none;
+}
+
+body {
+  margin-left:25%;
+  margin-right:25%;
+  font-family: 'Open Sans', sans-serif;
+  background-color:rgb(241, 234, 234);
+  height:100vh
+  }
+
+.AppDay {
+  color:black;
+}
+
+
+.AppDay::after{
+  content: "";
+  position: absolute;
+  background: url("../img/suntorange_bizfree.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: -2rem;
+  right: 0;
+  z-index: -1; 
+}
+
+.AppNight {
+  color: white;  
+}
+
+
+.AppNight::after{
+  content: "";
+  position: absolute;
+  background: url("../img/night.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  bottom: -2rem;
+  right: 0;
+  z-index: -1; 
+}
+
+@media only screen and (max-width: 660px) {
+  body {
+    margin-left:0;
+    margin-right:0;
+  }
+
+  .AppDay::after,.AppNight::after{
+    bottom: -0.1rem;
+  }
+
+
+}
+
+@media only screen and (min-width: 900px){
+  *{
+    margin-top:1px;
+  }
+}
